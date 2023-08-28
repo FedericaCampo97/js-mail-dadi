@@ -58,4 +58,7 @@ if (isIn == 0) {
     console.log ('Non sei tra gli invitati');
 }
 
+/*Usiamo un input e un bottone per inserire la mail e poi mostriamo 
+i risultati in pagina.*/
+
 
