@@ -27,3 +27,17 @@ if(numberGamer > numberPC) {
 } else if (numberGamer == numberPC) {
     console.log ('Pareggio');
 }
+
+
+/*Chiedi all'utente la sua email, 
+controlla che sia nella lista di chi può accedere, 
+stampa un messaggio appropriato sull’esito del controllo.*/
+
+//array
+//prompt
+//for
+//if
+//console.log
+
+//Creo una lista di invitati 
+const listPeople = ['Matteo','Federica','Fabio','Sara','Paolo','Lucia','Artur','Carla']
