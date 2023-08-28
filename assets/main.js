@@ -40,4 +40,22 @@ stampa un messaggio appropriato sull’esito del controllo.*/
 //console.log
 
 //Creo una lista di invitati 
-const listPeople = ['Matteo','Federica','Fabio','Sara','Paolo','Lucia','Artur','Carla']
+const listEmail = ['matteo@gmail.com','federica@gmail.com','fabio@gmail.com','paolo@gmail.com','artur@gmail.com']
+
+//Chiedo l'email all'utente 
+const emailPerson = prompt('Qual è la tua email?')
+
+//Controllo che sia nella lista 
+let isIn = 0
+for (let i= 0; i < listEmail.length; i++) {
+    const element = listEmail[i];
+    if (emailPerson == element) {
+        console.log ('Sei invitato!')
+        isIn = 1
+    } 
+}
+if (isIn == 0) {
+    console.log ('Non sei tra gli invitati');
+}
+
+
