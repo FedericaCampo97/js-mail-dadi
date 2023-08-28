@@ -41,22 +41,32 @@ stampa un messaggio appropriato sull’esito del controllo.*/
 
 //Creo una lista di invitati 
 const listEmail = ['matteo@gmail.com','federica@gmail.com','fabio@gmail.com','paolo@gmail.com','artur@gmail.com']
+//Collego il pulsante
+const DOMPulsante = document.getElementById('btn_scopri'); 
+console.log(DOMPulsante);
+//funzione
+DOMPulsante.addEventListener('click' , function(){
+    //Seleziono l'input email 
+    const inputEmail = document.getElementById ('box').value
+    //Controllo che sia nella lista 
+    let isIn = 0
+    for (let i= 0; i < listEmail.length; i++) {
+        const element = listEmail[i];
+        if (inputEmail == element) {
+           console.log ('Sei invitato!')
+           isIn = 1
+           document.getElementById ('result').innerHTML = 'Sei invitato!'
+           document.getElementById('result').style.color = "red"
+        }
+    }
+    if (isIn == 0) {
+        console.log ('Non sei tra gli invitati');
+        document.getElementById ('result').innerHTML = 'Non sei tra gli invitati'
+        document.getElementById('result').style.color = "brown"
+    }
+})
 
-//Chiedo l'email all'utente 
-const emailPerson = prompt('Qual è la tua email?')
 
-//Controllo che sia nella lista 
-let isIn = 0
-for (let i= 0; i < listEmail.length; i++) {
-    const element = listEmail[i];
-    if (emailPerson == element) {
-        console.log ('Sei invitato!')
-        isIn = 1
-    } 
-}
-if (isIn == 0) {
-    console.log ('Non sei tra gli invitati');
-}
 
 /*Usiamo un input e un bottone per inserire la mail e poi mostriamo 
 i risultati in pagina.*/
